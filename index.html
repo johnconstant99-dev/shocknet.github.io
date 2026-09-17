@@ -1,211 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Shock Network - Lightning Wallet and Bitcoin Ecosystem. Generate secure Bitcoin wallets and connect to the Lightning Network.">
+  <meta name="author" content="Shock Network">
+  <title>Shock Network - Lightning for Everyone</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Shock Network is a Lightning Wallet and Ecosystem for Bitcoin">
-    <meta name="author" content="">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Shock Network - Lightning for Everyone</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Simple Line Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@300;400;700&family=Muli:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+  <!-- Custom styles -->
+  <link href="css/new-age.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/new-age.css" rel="stylesheet">
+  <style>
+    /* Fixes and modern overrides */
+    .navbar-brand img {
+      max-height: 40px;
+    }
+    .masthead {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .header-content h1 {
+      color: #fff;
+      font-weight: 300;
+    }
+    .btn-outline {
+      color: #fcc12d;
+      border-color: #fcc12d;
+      border-width: 2px;
+    }
+    .btn-outline:hover {
+      background-color: #fcc12d;
+      color: #1a1a2e;
+    }
+    .btn-primary-custom {
+      background-color: #fcc12d;
+      border-color: #fcc12d;
+      color: #1a1a2e;
+      font-weight: 600;
+    }
+    .btn-primary-custom:hover {
+      background-color: #fcbd20;
+      border-color: #fcbd20;
+      color: #1a1a2e;
+    }
+    .download {
+      background: linear-gradient(135deg, #fcc12d 0%, #f39c12 100%) !important;
+    }
+    .download h2, .download p {
+      color: #1a1a2e;
+    }
+    .feature-item {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .feature-item i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .wallet-section {
+      background: #f8f9fa;
+      padding: 60px 0 80px;
+    }
+    .wallet-iframe-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+      border: 1px solid #e0e0e0;
+      background: #fff;
+    }
+    .wallet-iframe {
+      width: 100%;
+      height: 780px;
+      border: none;
+      display: block;
+      background: #fff;
+    }
+    @media (max-width: 768px) {
+      .wallet-iframe {
+        height: 650px;
+      }
+    }
+    @media (max-width: 480px) {
+      .wallet-iframe {
+        height: 580px;
+      }
+    }
+    .device-mockup-simple {
+      max-width: 280px;
+      margin: 0 auto;
+      border: 12px solid #222;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    }
+    .device-mockup-simple img {
+      width: 100%;
+      display: block;
+    }
+    .contact a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      color: #fcc12d;
+    }
+    footer {
+      background: #1a1a2e;
+      color: #aaa;
+      padding: 40px 0;
+    }
+    footer a {
+      color: #fcc12d;
+    }
+  </style>
+</head>
 
-  </head>
+<body id="page-top">
 
-  <body id="page-top">
-
-    <!-- Navigation -->
-    
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <img src="img/t_website_logo_s.png" class="img-responsive">
-        <button class="navbar-toggler navbar-toggler-center" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#download">Download</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#features">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <header class="masthead">
-      <div class="container h-100">
-        <div class="row h-100">
-          <div class="col-lg-7 my-auto">
-            <div class="header-content mx-auto">
-              <h1 class="mb-5">The Lightning Wallet you've been waiting for.</h1>
-              <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Coming Soon</a>
-            </div>
-          </div>
-          <div class="col-lg-5 my-auto">
-            <div class="device-container">
-              <div class="device-mockup iphone6_plus portrait white">
-                <div class="device">
-                  <div class="screen">
-                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                    <img src="img/screen1.png" class="img-fluid" alt="">
-                  </div>
-                  <div class="button">
-                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section class="download bg-primary text-center" id="download">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 mx-auto">
-            <h2 class="section-heading">Join the Bitcoin Revolution</h2>
-            <p>It's easier than ever before.</p>
-            <div class="badges">
-              <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
-              <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="features" id="features">
-      <div class="container">
-        <div class="section-heading text-center">
-          <h2>Earn Bitcoin with Lightning Apps!</h2>
-          <p class="text-muted">The Web3 economy at your fingertips...</p>
-          <hr>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 my-auto">
-            <div class="device-container">
-              <div class="device-mockup galaxy_s5 portrait black">
-                <div class="device">
-                  <div class="screen">
-                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                    <img src="img/screen2.png" class="img-fluid" alt="">
-                  </div>
-                  <div class="button">
-                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-8 my-auto">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <i class="icon-screen-smartphone text-primary"></i>
-                    <h3>Device Tokens</h3>
-                    <p class="text-muted">Protect your private keys by delegating access to specific devices.</p>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <i class="icon-camera text-primary"></i>
-                    <h3>Flexible Use</h3>
-                    <p class="text-muted">More than just a wallet, Shock doubles as a merchant platform.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <i class="icon-rocket text-primary"></i>
-                    <h3>Bitcoin Network</h3>
-                    <p class="text-muted">Shock Network brings Bitcoin users together with social features.</p>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <i class="icon-lock-open text-primary"></i>
-                    <h3>Open Source</h3>
-                    <p class="text-muted">Use any node you like, your security and privacy shall not be infringed.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
- <!--   <section class="cta">
-      <div class="cta-content">
-        <div class="container">
-          <h2>Stop waiting.<br>Start buidling.</h2>
-          <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">Actually, Keep Waiting.</a>
-        </div>
-      </div>
-      <div class="overlay"></div>
-    </section> 
-  -->
-
-    <section class="contact bg-primary" id="contact">
-      <div class="container">
-        <h2>Argue with us on <a href="https://twitter.com/CapitalistDog1">
-              <i class="fab fa-twitter"></i>
-            </a></h2>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <p>&copy; Shock Network 2018. All Rights Reserved.</p>
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a href="#">Privacy</a>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: rgba(26,26,46,0.95);">
+    <div class="container">
+      <a class="navbar-brand" href="#page-top">
+        <img src="img/t_website_logo_s.png" alt="Shock Network" class="img-fluid">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#download">Download</a>
           </li>
-          <li class="list-inline-item">
-            <a href="#">Terms</a>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#wallet">Generate Wallet</a>
           </li>
-          <li class="list-inline-item">
-            <a href="#">FAQ</a>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
-    </footer>
+    </div>
+  </nav>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Hero / Masthead -->
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-7 my-auto">
+          <div class="header-content mx-auto py-5">
+            <h1 class="mb-4">The Lightning Wallet you've been waiting for.</h1>
+            <p class="text-white-50 mb-4 lead">Non-custodial. Nostr-native. Connect to your own node or share access securely. Open source and built for Bitcoin.</p>
+            <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger me-2 mb-2">Get ShockWallet</a>
+            <a href="#wallet" class="btn btn-primary-custom btn-xl js-scroll-trigger mb-2">Generate Bitcoin Wallet</a>
+          </div>
+        </div>
+        <div class="col-lg-5 my-auto text-center">
+          <div class="device-mockup-simple">
+            <img src="img/screen1.png" class="img-fluid" alt="ShockWallet screenshot">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Download Section -->
+  <section class="download text-center" id="download">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 mx-auto">
+          <h2 class="section-heading mb-3">Join the Bitcoin Revolution</h2>
+          <p class="mb-4">Download ShockWallet — the Nostr-native Lightning wallet. Connect to your node, share access, and use Lightning the open way.</p>
+          <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+            <a class="btn btn-dark btn-lg" href="https://play.google.com/store/apps/details?id=app.shockwallet.my" target="_blank" rel="noopener">
+              <i class="fab fa-google-play me-2"></i> Google Play
+            </a>
+            <a class="btn btn-dark btn-lg" href="https://shockwallet.app" target="_blank" rel="noopener">
+              <i class="fas fa-globe me-2"></i> Web / PWA
+            </a>
+            <a class="btn btn-dark btn-lg" href="https://github.com/shocknet/wallet2" target="_blank" rel="noopener">
+              <i class="fab fa-github me-2"></i> Source Code
+            </a>
+          </div>
+          <p class="small text-dark">Also available for self-hosting and node operators via <a href="https://shock.network" target="_blank" rel="noopener" class="text-dark fw-bold">shock.network</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/new-age.min.js"></script>
+  <!-- Wallet Generation Section (bitaddress.org embedded) -->
+  <section class="wallet-section" id="wallet">
+    <div class="container-fluid px-3 px-lg-4">
+      <div class="row mb-4">
+        <div class="col-lg-10 mx-auto text-center">
+          <h2 class="section-heading">Generate a Bitcoin Wallet</h2>
+          <p class="text-muted mb-2">
+            Powered by <strong>bitaddress.org</strong> — pure client-side JavaScript. Your private keys never leave your browser.
+          </p>
+          <p class="small text-muted mb-3">
+            <i class="fas fa-shield-alt me-1"></i>
+            For maximum security, open the generator in a new tab or download the page and run it offline.
+            <a href="https://www.bitaddress.org/" target="_blank" rel="noopener noreferrer" class="ms-1">Open full screen ↗</a>
+          </p>
+        </div>
+      </div>
 
-  </body>
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="wallet-iframe-wrapper">
+            <iframe
+              src="https://www.bitaddress.org/"
+              title="bitaddress.org Bitcoin Wallet Generator"
+              class="wallet-iframe"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-md-4 text-center mb-3">
+          <i class="icon-lock text-primary" style="font-size:2rem;"></i>
+          <h5 class="mt-2">Client-Side Only</h5>
+          <p class="text-muted small mb-0">All generation happens in your browser. No server ever sees your keys.</p>
+        </div>
+        <div class="col-md-4 text-center mb-3">
+          <i class="icon-printer text-primary" style="font-size:2rem;"></i>
+          <h5 class="mt-2">Paper Wallet Ready</h5>
+          <p class="text-muted small mb-0">Print QR codes for cold storage. Ideal for long-term Bitcoin holdings.</p>
+        </div>
+        <div class="col-md-4 text-center mb-3">
+          <i class="icon-check text-primary" style="font-size:2rem;"></i>
+          <h5 class="mt-2">Open Source</h5>
+          <p class="text-muted small mb-0">Auditable code. Trusted by the Bitcoin community for over a decade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="section-heading">Why Shock?</h2>
+          <p class="text-muted">Built for real Bitcoin users and node operators.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="icon-screen-smartphone text-primary"></i>
+            <h3>Lightning Native</h3>
+            <p class="text-muted">Connect to LND nodes over Nostr. No more complex networking, Tor, or port forwarding.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="icon-camera text-primary"></i>
+            <h3>Multi-Device Sync</h3>
+            <p class="text-muted">Nostr-based accounts let you use the same wallet on phone, desktop, and browser securely.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="icon-present text-primary"></i>
+            <h3>Share Your Node</h3>
+            <p class="text-muted">Invite family or friends to use your node with role-based access. Uncle Jim made simple.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="icon-lock-open text-primary"></i>
+            <h3>Fully Open Source</h3>
+            <p class="text-muted">AGPL-3.0. Use any node you like. Your security and privacy shall not be infringed.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="icon-rocket text-primary"></i>
+            <h3>CLINK & Automation</h3>
+            <p class="text-muted">Recurring payments, pre-authorized apps, and Nostr offers for seamless Lightning UX.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="icon-layers text-primary"></i>
+            <h3>Lightning.Pub Ready</h3>
+            <p class="text-muted">The reference client for Lightning.Pub — turn one node into a multi-user service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact bg-primary text-center" id="contact" style="background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%) !important;">
+    <div class="container">
+      <h2 class="text-white mb-4">Connect with the community</h2>
+      <div class="d-flex justify-content-center gap-4 flex-wrap">
+        <a href="https://twitter.com/ShockBTC" target="_blank" rel="noopener" class="text-white fs-3" title="Twitter / X">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://github.com/shocknet" target="_blank" rel="noopener" class="text-white fs-3" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://t.me/shockbtc" target="_blank" rel="noopener" class="text-white fs-3" title="Telegram">
+          <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://shock.network" target="_blank" rel="noopener" class="text-white fs-3" title="Website">
+          <i class="fas fa-globe"></i>
+        </a>
+      </div>
+      <p class="text-white-50 mt-4 mb-0">shock.network · Built since 2018</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p class="mb-2">&copy; Shock Network. All Rights Reserved. Open source under AGPL-3.0.</p>
+      <ul class="list-inline mb-0">
+        <li class="list-inline-item">
+          <a href="https://shock.network" target="_blank" rel="noopener">shock.network</a>
+        </li>
+        <li class="list-inline-item">·</li>
+        <li class="list-inline-item">
+          <a href="https://github.com/shocknet" target="_blank" rel="noopener">GitHub</a>
+        </li>
+        <li class="list-inline-item">·</li>
+        <li class="list-inline-item">
+          <a href="https://www.bitaddress.org/" target="_blank" rel="noopener">bitaddress.org</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Smooth scroll -->
+  <script>
+    document.querySelectorAll('a.js-scroll-trigger[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 70;
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementRect = target.getBoundingClientRect().top;
+          const elementPosition = elementRect - bodyRect;
+          const offsetPosition = elementPosition - offset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+          // Close mobile menu
+          const navbar = document.querySelector('.navbar-collapse');
+          if (navbar && navbar.classList.contains('show')) {
+            bootstrap.Collapse.getInstance(navbar)?.hide();
+          }
+        }
+      });
+    });
+
+    // Navbar background on scroll
+    window.addEventListener('scroll', function () {
+      const nav = document.getElementById('mainNav');
+      if (window.scrollY > 50) {
+        nav.style.backgroundColor = 'rgba(26,26,46,0.98)';
+        nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+      } else {
+        nav.style.backgroundColor = 'rgba(26,26,46,0.95)';
+        nav.style.boxShadow = 'none';
+      }
+    });
+  </script>
+
+</body>
 
 </html>
