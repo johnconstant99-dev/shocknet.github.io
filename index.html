@@ -8,103 +8,60 @@
   <meta name="author" content="Shock Network">
   <title>Shock Network - Lightning for Everyone</title>
 
-  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-  <!-- Simple Line Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@300;400;700&family=Muli:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Custom styles -->
   <link href="css/new-age.css" rel="stylesheet">
 
   <style>
-    /* Fixes and modern overrides */
-    .navbar-brand img {
-      max-height: 40px;
-    }
+    .navbar-brand img { max-height: 40px; }
     .masthead {
       background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
       min-height: 100vh;
       display: flex;
       align-items: center;
     }
-    .header-content h1 {
-      color: #fff;
-      font-weight: 300;
-    }
-    .btn-outline {
-      color: #fcc12d;
-      border-color: #fcc12d;
-      border-width: 2px;
-    }
-    .btn-outline:hover {
-      background-color: #fcc12d;
-      color: #1a1a2e;
-    }
+    .header-content h1 { color: #fff; font-weight: 300; }
+    .btn-outline { color: #fcc12d; border-color: #fcc12d; border-width: 2px; }
+    .btn-outline:hover { background-color: #fcc12d; color: #1a1a2e; }
     .btn-primary-custom {
-      background-color: #fcc12d;
-      border-color: #fcc12d;
-      color: #1a1a2e;
-      font-weight: 600;
+      background-color: #fcc12d; border-color: #fcc12d; color: #1a1a2e; font-weight: 600;
     }
     .btn-primary-custom:hover {
-      background-color: #fcbd20;
-      border-color: #fcbd20;
-      color: #1a1a2e;
+      background-color: #fcbd20; border-color: #fcbd20; color: #1a1a2e;
     }
-    .download {
-      background: linear-gradient(135deg, #fcc12d 0%, #f39c12 100%) !important;
-    }
-    .download h2, .download p {
-      color: #1a1a2e;
-    }
-    .feature-item {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .feature-item i {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
+    .download { background: linear-gradient(135deg, #fcc12d 0%, #f39c12 100%) !important; }
+    .download h2, .download p { color: #1a1a2e; }
+    .feature-item { text-align: center; margin-bottom: 2rem; }
+    .feature-item i { font-size: 3rem; margin-bottom: 1rem; }
     .device-mockup-simple {
-      max-width: 280px;
-      margin: 0 auto;
-      border: 12px solid #222;
-      border-radius: 36px;
-      overflow: hidden;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+      max-width: 280px; margin: 0 auto; border: 12px solid #222; border-radius: 36px;
+      overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.3);
     }
-    .device-mockup-simple img {
-      width: 100%;
-      display: block;
+    .device-mockup-simple img { width: 100%; display: block; }
+    .buy-bitcoin-section { background: #f8f9fa; padding: 80px 0; }
+    .buy-card {
+      background: #fff; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      padding: 1.75rem; text-align: center; height: 100%; border: 1px solid #eee;
     }
-    .contact a {
-      color: #fff;
-      text-decoration: none;
+    .buy-card-icon { font-size: 2.25rem; color: #fcc12d; margin-bottom: 0.75rem; }
+    .badge-best {
+      display: inline-block; background: rgba(252, 193, 45, 0.2); color: #8a6d0b;
+      font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.6rem; border-radius: 999px; margin-bottom: 0.75rem;
     }
-    .contact a:hover {
-      color: #fcc12d;
+    .buy-steps {
+      background: #fff; border-radius: 12px; padding: 1.75rem 2rem; border: 1px solid #eee;
     }
-    footer {
-      background: #1a1a2e;
-      color: #aaa;
-      padding: 40px 0;
-    }
-    footer a {
-      color: #fcc12d;
-    }
+    .contact a { color: #fff; text-decoration: none; }
+    .contact a:hover { color: #fcc12d; }
+    footer { background: #1a1a2e; color: #aaa; padding: 40px 0; }
+    footer a { color: #fcc12d; }
   </style>
 </head>
 
 <body id="page-top">
 
-  <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: rgba(26,26,46,0.95);">
     <div class="container">
       <a class="navbar-brand" href="#page-top">
@@ -120,6 +77,9 @@
             <a class="nav-link js-scroll-trigger" href="#download">Download</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#buy-bitcoin">Buy Bitcoin</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#features">Features</a>
           </li>
           <li class="nav-item">
@@ -130,7 +90,6 @@
     </div>
   </nav>
 
-  <!-- Hero / Masthead -->
   <header class="masthead">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
@@ -139,6 +98,7 @@
             <h1 class="mb-4">The Lightning Wallet you've been waiting for.</h1>
             <p class="text-white-50 mb-4 lead">Non-custodial. Nostr-native. Connect to your own node or share access securely. Open source and built for Bitcoin.</p>
             <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger me-2 mb-2">Get ShockWallet</a>
+            <a href="#buy-bitcoin" class="btn btn-primary-custom btn-xl js-scroll-trigger mb-2">Buy Bitcoin</a>
           </div>
         </div>
         <div class="col-lg-5 my-auto text-center">
@@ -150,7 +110,6 @@
     </div>
   </header>
 
-  <!-- Download Section -->
   <section class="download text-center" id="download">
     <div class="container">
       <div class="row">
@@ -161,7 +120,7 @@
             <a class="btn btn-dark btn-lg" href="https://play.google.com/store/apps/details?id=app.shockwallet.my" target="_blank" rel="noopener">
               <i class="fab fa-google-play me-2"></i> Google Play
             </a>
-            <a class="btn btn-dark btn-lg" href="https://shockwallet.app" target="_blank" rel="noopener">
+            <a class="btn btn-dark btn-lg" href="https://my.shockwallet.app" target="_blank" rel="noopener">
               <i class="fas fa-globe me-2"></i> Web / PWA
             </a>
             <a class="btn btn-dark btn-lg" href="https://github.com/shocknet/wallet2" target="_blank" rel="noopener">
@@ -174,7 +133,91 @@
     </div>
   </section>
 
-  <!-- Features Section -->
+  <section class="buy-bitcoin-section" id="buy-bitcoin">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-10 mx-auto text-center">
+          <h2 class="section-heading">Buy Bitcoin</h2>
+          <p class="text-muted">
+            The in-app <strong>Buy Bitcoin</strong> menu in ShockWallet may not work in every region or without a configured on-ramp.
+            Use a reputable exchange below, then withdraw BTC to ShockWallet or another wallet you control.
+          </p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="buy-card h-100">
+            <div class="buy-card-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h4>Coinbase</h4>
+            <p class="badge-best">Best for beginners</p>
+            <p class="text-muted small">Regulated US exchange with a simple app. Link a bank or card. Use Advanced Trade for lower fees when ready.</p>
+            <a href="https://www.coinbase.com/buy/bitcoin" target="_blank" rel="noopener" class="btn btn-primary-custom btn-sm">Buy on Coinbase</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="buy-card h-100">
+            <div class="buy-card-icon"><i class="fas fa-percentage"></i></div>
+            <h4>Kraken</h4>
+            <p class="badge-best">Best lower fees</p>
+            <p class="text-muted small">Strong security record. Use Kraken Pro for competitive fees on Bitcoin.</p>
+            <a href="https://www.kraken.com" target="_blank" rel="noopener" class="btn btn-primary-custom btn-sm">Buy on Kraken</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="buy-card h-100">
+            <div class="buy-card-icon"><i class="fas fa-bolt"></i></div>
+            <h4>Strike</h4>
+            <p class="badge-best">Best Lightning-native</p>
+            <p class="text-muted small">Buy Bitcoin with low fees and send over Lightning — ideal with ShockWallet.</p>
+            <a href="https://strike.me" target="_blank" rel="noopener" class="btn btn-primary-custom btn-sm">Buy on Strike</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="buy-card h-100">
+            <div class="buy-card-icon"><i class="fas fa-calendar-check"></i></div>
+            <h4>River</h4>
+            <p class="badge-best">Best for DCA</p>
+            <p class="text-muted small">Bitcoin-only. Recurring buys and a clear path to self-custody.</p>
+            <a href="https://river.com" target="_blank" rel="noopener" class="btn btn-primary-custom btn-sm">Buy on River</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="buy-card h-100">
+            <div class="buy-card-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h4>Cash App</h4>
+            <p class="badge-best">Fast & simple</p>
+            <p class="text-muted small">Easy if you already use Cash App. Withdraw to your own wallet as amounts grow.</p>
+            <a href="https://cash.app/help/us/en-us/3001-bitcoin" target="_blank" rel="noopener" class="btn btn-primary-custom btn-sm">Cash App Bitcoin</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="buy-card h-100">
+            <div class="buy-card-icon"><i class="fas fa-university"></i></div>
+            <h4>Swan Bitcoin</h4>
+            <p class="badge-best">Long-term stacking</p>
+            <p class="text-muted small">Bitcoin-only buying with education aimed at long-term holders.</p>
+            <a href="https://www.swanbitcoin.com" target="_blank" rel="noopener" class="btn btn-primary-custom btn-sm">Buy on Swan</a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-10 mx-auto">
+          <div class="buy-steps">
+            <h4 class="mb-3">Safe buy checklist</h4>
+            <ol class="text-muted">
+              <li>Use a regulated, well-known platform — not links from strangers or ads.</li>
+              <li>Enable app-based 2FA before funding the account.</li>
+              <li>Prefer bank transfer (ACH) for lower fees; card is fine for a small test buy.</li>
+              <li>Start small and read the full order preview before confirming.</li>
+              <li>Withdraw Bitcoin to a wallet you control (e.g. ShockWallet) for larger amounts.</li>
+            </ol>
+            <p class="small text-muted mb-0">Availability and fees depend on your country. This is educational information, not financial advice.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="features" id="features">
     <div class="container">
       <div class="row">
@@ -230,12 +273,11 @@
     </div>
   </section>
 
-  <!-- Contact -->
   <section class="contact bg-primary text-center" id="contact" style="background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%) !important;">
     <div class="container">
       <h2 class="text-white mb-4">Connect with the community</h2>
       <div class="d-flex justify-content-center gap-4 flex-wrap">
-        <a href="https://twitter.com/ShockBTC" target="_blank" rel="noopener" class="text-white fs-3" title="Twitter / X">
+        <a href="https://x.com/ShockBTC" target="_blank" rel="noopener" class="text-white fs-3" title="X (Twitter)">
           <i class="fab fa-twitter"></i>
         </a>
         <a href="https://github.com/shocknet" target="_blank" rel="noopener" class="text-white fs-3" title="GitHub">
@@ -247,12 +289,14 @@
         <a href="https://shock.network" target="_blank" rel="noopener" class="text-white fs-3" title="Website">
           <i class="fas fa-globe"></i>
         </a>
+        <a href="https://docs.shock.network" target="_blank" rel="noopener" class="text-white fs-3" title="Docs">
+          <i class="fas fa-book"></i>
+        </a>
       </div>
       <p class="text-white-50 mt-4 mb-0">shock.network · Built since 2018</p>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="container text-center">
       <p class="mb-2">&copy; Shock Network. All Rights Reserved. Open source under AGPL-3.0.</p>
@@ -264,14 +308,15 @@
         <li class="list-inline-item">
           <a href="https://github.com/shocknet" target="_blank" rel="noopener">GitHub</a>
         </li>
+        <li class="list-inline-item">·</li>
+        <li class="list-inline-item">
+          <a href="https://docs.shock.network" target="_blank" rel="noopener">Docs</a>
+        </li>
       </ul>
     </div>
   </footer>
 
-  <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Smooth scroll -->
   <script>
     document.querySelectorAll('a.js-scroll-trigger[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -283,11 +328,7 @@
           const elementRect = target.getBoundingClientRect().top;
           const elementPosition = elementRect - bodyRect;
           const offsetPosition = elementPosition - offset;
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-          // Close mobile menu
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
           const navbar = document.querySelector('.navbar-collapse');
           if (navbar && navbar.classList.contains('show')) {
             bootstrap.Collapse.getInstance(navbar)?.hide();
@@ -295,8 +336,6 @@
         }
       });
     });
-
-    // Navbar background on scroll
     window.addEventListener('scroll', function () {
       const nav = document.getElementById('mainNav');
       if (window.scrollY > 50) {
